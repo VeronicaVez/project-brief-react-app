@@ -1,0 +1,10 @@
+.NavBar {
+    border-bottom: 1px solid;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.NavBar img {
+    width: 80px;
+}
