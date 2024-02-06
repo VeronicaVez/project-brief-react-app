@@ -1,12 +1,12 @@
 import './SideBar.css'
 
-const SideBar = (props) => {
-
-    const link = props.link
-    const text = props.text
+const SideBar = () => {
 
     return (
-        <a href={link}>{text}</a>
+        <header className="SideBar">
+            <a href="#" >Home</a>
+            <a href="#" >About</a>
+        </header>
     )
 }
 

@@ -1,3 +1,15 @@
 .Footer {
+    color: white;
     text-align: center;
+    background-color: violet;
+    font-size: 0.8em;
+    padding: 3px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
 }

@@ -1,17 +1,13 @@
 import './NavBar.css'
 import logo from './../../assets/images/shopping-cart.png'
-import Title from './Title'
 
 
 const NavBar = () => {
-    const styleObject = {
-        color: "violet"
-    }
 
     return(
-        <header className='NavBar' style={styleObject}>
+        <header className='NavBar'>
+            <h1>Shop it</h1>
             <img src={logo} alt="logo"/>
-            <Title text={'Shop it'} />
         </header>
     )
 }
