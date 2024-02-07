@@ -6,7 +6,7 @@ const NavBar = () => {
 
     return(
         <header className='NavBar'>
-            <h1>Shop it</h1>
+            <h1>Easy-Buy</h1>
             <img src={logo} alt="logo"/>
         </header>
     )

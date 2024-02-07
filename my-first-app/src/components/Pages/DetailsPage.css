@@ -1,4 +1,4 @@
-.Products {
+.DetailsPage {
     border-bottom: 1px solid black;
     align-items: center;
     margin-left: 210px;
@@ -6,13 +6,7 @@
     justify-content: space-between;
 }
 
-.Products figure {
+.DetailsPage figure {
     width: 100%;
 }
-
-.Products .info{
-    width: 60%;
-}
-
-
 
