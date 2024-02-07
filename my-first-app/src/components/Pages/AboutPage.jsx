@@ -3,7 +3,10 @@ import "./AboutPage.css"
 
 const AboutPage = () =>{
     return (
-        <h1 className="AboutPage">Hello! Somos nosotros!!</h1>
+        <div className="AboutPage">
+        <h1>Quienes somos?</h1>
+        <p>Somos Jeronimo Olea y Veronica Vezzoli, estudiantes de IronHack y esta es nuestra primera single page web site.</p>
+        </div>
     )
 }
 

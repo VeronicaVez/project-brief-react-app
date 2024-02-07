@@ -1,18 +1,28 @@
 .Products {
-    border-bottom: 1px solid black;
-    align-items: center;
-    margin-left: 210px;
-    display: block;
-    justify-content: space-between;
+        border-bottom: 1px solid #ccc;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            margin-left: 210px;
+            width: 50%;
 }
 
 .Products figure {
-    width: 100%;
+    width: 50%;
 }
 
-.Products .info{
-    width: 60%;
+.imageProSize{
+    width: 300px;
 }
 
+
+h2{
+    margin-left: 600px;
+}
+
+button{
+    margin-left: 130px;
+    font-size: 1em;
+}
 
 

@@ -14,20 +14,18 @@ const ProductsList = () => {
     };
 
     return (
-        <section className='Products'>
+        <section>
             <h2>Product List</h2>
             {products.map(product => (
-                <div key={product.id}>
+                <div key={product.id} className='Products'>
                     <figure>
-                    <img src={product.thumbnail} alt="Product Image" />
+                    <img src={product.thumbnail} alt="Product Image" class="imageProSize" />
                     </figure>
                     <article className="info">
                     <h3>{product.title}</h3>
-                    <p>{product.description}</p>
-                    <p>{product.price}$</p>
-                    <p>{product.discountPercentage > 15 ? 'SUPER OFERTA!' : undefined}</p>
-                    <Link to={`/products/${product.id}`}>Details</Link>
-                    <br/>
+                    <p>{product.description} </p> 
+                    <p>{product.price}$ <br/> {product.discountPercentage > 15 ? 'SUPER OFERTA!' : undefined}</p>
+                    <Link to={`/products/${product.id}`}>Details</Link> 
                     <button className="btn-delete" onClick={() => deleteProduct(product.id)}>Delete</button>
                     <hr/>
                     </article>
