@@ -2,13 +2,13 @@
         border-bottom: 1px solid #ccc;
             padding: 10px;
             display: flex;
-            align-items: center;
             margin-left: 210px;
             width: 50%;
+            margin-right: 0;
 }
 
 .Products figure {
-    width: 50%;
+    width: 60%;
 }
 
 .imageProSize{
@@ -17,12 +17,21 @@
 
 
 h2{
-    margin-left: 600px;
+    margin-left: 450px;
 }
 
 button{
-    margin-left: 130px;
-    font-size: 1em;
+    margin-left: 200px;
+
+}
+.Form{
+    margin-right: 250px;
+    width: 300px;
 }
 
+
+.flex{
+    display: flex;
+    margin-top: 70px;
+}
 

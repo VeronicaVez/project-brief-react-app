@@ -10,8 +10,6 @@ const ProductCard = props => {
             <h3>{ListOfProducts.title}</h3>
             <p>{ListOfProducts.description}</p>
             <p>{ListOfProducts.price}</p>
-
-            <button className="btn-delete" onClick={() => deleteMovie(movie._id)}>Delete </button>
         </article>
     ) 
 
