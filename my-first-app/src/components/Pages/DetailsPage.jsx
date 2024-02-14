@@ -1,6 +1,8 @@
 import { Navigate, useParams} from "react-router-dom"
 import productsData from "./../../products.json"
 import './DetailsPage.css'
+import EditForm from "../Products/EditForm"
+import { useState } from "react"
 
 const ProductsDetailsPage = () => {
 
@@ -11,6 +13,12 @@ const ProductsDetailsPage = () => {
     })
 
     if (!foundProduct) return <Navigate to="/error"/>
+
+    const [isVisible, setVisible] = useState(false)
+
+    const toggleVisibility = () => {
+        setVisible(!isVisible)
+    }
 
     return (
         <>
@@ -25,5 +33,6 @@ const ProductsDetailsPage = () => {
         </>
     )
 }
+
 
 export default ProductsDetailsPage

@@ -1,8 +1,9 @@
-import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import "./EditForm.css"
+import ListOfProducts from "./../../products.json" 
+import { useNavigate } from "react-router-dom";
 
-
-const Form = ({addNewProduct}) => {
+const EditForm = ({editProduct}) => {
 
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
@@ -19,7 +20,7 @@ const Form = ({addNewProduct}) => {
     const handleSubmit = event => {
         event.preventDefault()
 
-        const newProduct = {
+        const editProduct = {
             title: title,
             description: description,
             price: price,
@@ -27,13 +28,13 @@ const Form = ({addNewProduct}) => {
             discountPercentage: discountPercentage
         }
 
-        addNewProduct(newProduct)
+        editProduct(editProduct)
     }
 
-
     return(
-        <div>
+        <div className="EditForm">
             <form onSubmit={handleSubmit}>
+                <hr/>
                 <label>
                     Name of the Product:
                     <input type="text" value={title} onChange={handleTitleChange}/>
@@ -51,7 +52,7 @@ const Form = ({addNewProduct}) => {
                 <br/>
                 <label>
                     Photo:
-                    <input type="url" value={thumbnail} onChange={handleThumbnailChange}/>
+                    <input type="text" value={thumbnail} onChange={handleThumbnailChange}/>
                 </label>
                 <br/>
                 <label>
@@ -59,11 +60,10 @@ const Form = ({addNewProduct}) => {
                     <input type="text" value={discountPercentage} onChange={handleDiscountChange}/>
                 </label>
                 <br/>
-                <input type="submit"  value = 'ADD PRODUCT!'/>
+                <input type="submit"  value = 'CHANGE DETAILS!'/>
             </form>
         </div>
     )
-
 }
 
-export default Form
+export default EditForm

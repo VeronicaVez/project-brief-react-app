@@ -2,11 +2,11 @@ import ListOfProducts from '../../products.json'
 import { useState } from 'react'
 import './Products.css'
 import {Link} from "react-router-dom"
-import ProductForm from './Form' 
+import Form from './Form' 
+import EditForm from './EditForm'
 
 const ProductsList = () => {
     const [products, setProducts] = useState(ListOfProducts);
-    const [editingProduct, setEditingProduct] = useState(null);
 
     const deleteProduct = productIdToDelete => {
         const filteredProducts = products.filter(product => product.id !== productIdToDelete);
@@ -18,6 +18,13 @@ const ProductsList = () => {
         productsCopy.unshift(newProduct)
         setProducts(productsCopy)
     }
+
+        const [isVisible, setVisible] = useState(false)
+
+    const toggleVisibility = () => {
+        setVisible(!isVisible)
+    }
+
     return (
         <div className="flex">
             <section>
@@ -32,8 +39,9 @@ const ProductsList = () => {
                             <h3>{product.title}</h3>
                             </Link>
                         <p>{product.description} </p> 
-                        <p>{product.price}$ <br/> {product.discountPercentage > 15 ? 'SUPER OFERTA!' : undefined}</p>
+                        <p>{product.price}$ <br/> {product.discountPercentage > 15 ? 'GREAT DEAL!' : undefined}</p>
                         <button className="btn-delete" onClick={() => deleteProduct(product.id)}>Delete</button>
+                        <button className="btn-editProduct" onClick={toggleVisibility}>Edit</button>
                         <hr/>
                         </article>
                     </div>
@@ -42,7 +50,10 @@ const ProductsList = () => {
 
             <section>
                 <h1 className = 'Form'>Have something to sell? Add it here!</h1>
-                <ProductForm addNewProduct = {addNewProduct}/>
+                <Form addNewProduct = {addNewProduct}/>
+                <div style={{display: isVisible ? "flex" : "none"}}>
+                <EditForm/>
+                </div>
             </section>
         </div>
        
